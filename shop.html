@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entdecke die exklusive Vencance Kollektion in unserem Shop.">
+    <title>Vencance | Shop</title>
+    <style>
+        /* Allgemeine Stile */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #1a1a1a;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 28px;
+            cursor: pointer;
+            color: #f05053;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f05053;
+        }
+
+        /* Hero-Sektion */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 65vh;
+            text-align: center;
+            background: linear-gradient(to right, rgba(13, 13, 13, 0.8), rgba(13, 13, 13, 0.8)), url('https://images.unsplash.com/photo-1563622849-bbf3f118d68e') center/cover no-repeat;
+            color: white;
+            margin-top: 70px;
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .hero .button {
+            background-color: #f05053;
+            border: none;
+            color: white;
+            padding: 15px 35px;
+            font-size: 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero .button:hover {
+            background-color: #e03538;
+        }
+
+        /* Produkt-Sektion */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #f05053;
+        }
+
+        .product-card p {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #b0b0b0;
+        }
+
+        .product-card .price {
+            font-size: 22px;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .product-card button {
+            background-color: #f05053;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-card button:hover {
+            background-color: #e03538;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #1a1a1a;
+            color: #b0b0b0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 onclick="scrollToTop()">Vencance</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>Willkommen im Vencance Shop</h2>
+            <p>Entdecke unsere einzigartigen Designs. Qualität, Komfort und Stil in jedem Stück.</p>
+            <button class="button" onclick="scrollToSection('products')">Kollektion ansehen</button>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Stylisches T-Shirt">
+            <h3>Stylisches T-Shirt</h3>
+            <p>Bequemes T-Shirt aus hochwertiger Baumwolle.</p>
+            <p class="price">€29,99</p>
+            <button>In den Warenkorb</button>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Cooler Hoodie">
+            <h3>Cooler Hoodie</h3>
+            <p>Hochwertiger Hoodie für kalte Tage.</p>
+            <p class="price">€49,99</p>
+            <button>In den Warenkorb</button>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Elegante Jacke">
+            <h3>Elegante Jacke</h3>
+            <p>Jacke für einen stilvollen Auftritt.</p>
+            <p class="price">€79,99</p>
+            <button>In den Warenkorb</button>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Bequeme Jogginghose">
+            <h3>Bequeme Jogginghose</h3>
+            <p>Perfekte Jogginghose für Sport und Freizeit.</p>
+            <p class="price">€39,99</p>
+            <button>In den Warenkorb</button>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Stylische Mütze">
+            <h3>Stylische Mütze</h3>
+            <p>Hochwertige Mütze für jeden Anlass.</p>
+            <p class="price">€19,99</p>
+            <button>In den Warenkorb</button>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Exklusive Tasche">
+            <h3>Exklusive Tasche</h3>
+            <p>Schicke Tasche für den modernen Lifestyle.</p>
+            <p class="price">€59,99</p>
+            <button>In den Warenkorb</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Vencance. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+        // Funktion für Scroll zu bestimmten Sektionen
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Funktion zum Scrollen nach oben
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
